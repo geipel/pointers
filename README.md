@@ -17,8 +17,13 @@ define a default behavior for the default constructor, instead of dis-allowing i
 
 ## Goals
 Explore the use of templates to define smart pointers that do not require ubiquitious validity tests like:
-> `if (p->get() != nullptr) {` ... use the pointer ... `}`
+> `if (p->get() != nullptr) {` ... _use the pointer_ ... `}`
 
+- unambiguous ownership of underlying resources, scoped lifetime
+- thread safe
 - exception safe
+- portable
 - efficient
-- unambiguous ownership of underlying resources
+- const-correct semantics
+- fully unit-tested
+- Investigate limited support for **_async-signal_ safe** usage.
